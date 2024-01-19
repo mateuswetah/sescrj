@@ -1,0 +1,203 @@
+.tainacan-sescrj-table-container {
+    min-height: 50vh;
+    width: 100%;
+    padding: 0;
+    margin-top: 0px;
+    animation-name: appear;
+    animation-duration: 0.5s;
+    overflow-x: auto;
+    border: none;
+    max-width: 990px;
+    margin-left: auto;
+}
+.tainacan-sescrj-table-container-table {
+    table-layout: auto;
+    display: table;
+    width: 100%;
+    border: none;
+}
+
+.tainacan-sescrj-table-container .tainacan-sescrj-table-item {
+    width: 100%;
+    margin: 0px 0px 24px 0px;
+    padding-bottom: 24px;
+    text-decoration: none !important;
+}
+.tainacan-sescrj-table-container .tainacan-sescrj-table-item td:not(:first-child):not(:last-child) {
+    border-right: 1px dashed var(--theme-palette-color-5);
+}
+
+.tainacan-sescrj-table-container .tainacan-sescrj-table-item.skeleton {
+    width: 100%;
+    height: 380px;
+}
+.tainacan-sescrj-table-container tr {
+    border: none;
+}
+.tainacan-sescrj-table-container th {
+    border: none;
+    border-bottom: 1px solid var(--theme-palette-color-3);
+    vertical-align: center;
+    color: var(--theme-palette-color-3);
+    font-size: 0.75rem;
+    font-weight: normal;
+    text-align: start;
+    padding: 0 calc(2.25 * var(--global--spacing-unit)) calc(0.875 * var(--global--spacing-unit)) 0;
+}
+.tainacan-sescrj-table-item td {
+    border: none;
+    vertical-align: middle;
+    text-align: start;
+    max-width: 180px;
+    width: 180px;
+    min-width: 80px;
+    height: 115px;
+    padding: 8px 0;
+}
+.sescrj-table-item-thumbnail  {
+    margin: 0 auto;
+    text-align: center !important;
+    width: 200px;
+    max-width: 200px;
+}
+th.sescrj-table-item-thumbnail {
+    width: 200px;
+    max-width: 200px;
+}
+.sescrj-table-item-thumbnail--border {
+    width: 90%;
+    display: block;
+    margin-bottom: -12px;
+    border-bottom: 8px solid var(--theme-palette-color-3);
+}
+.sescrj-table-item-thumbnail img {
+    max-width: 100px;
+    max-height: 70px;
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+    box-shadow: -1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.sescrj-table-item-thumbnail .sescrj-placeholder {
+    width: 100px;
+    height: 70px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-size: 0.75rem;
+    box-shadow: -1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.tainacan-sescrj-table-item th.tainacan-text--title,
+.tainacan-sescrj-table-item td.metadata-type-core_title {
+    max-width: 290px;
+    width: 290px;
+    min-width: 160px;
+    position: relative;
+}
+.tainacan-sescrj-table-item th.tainacan-textarea,
+.tainacan-sescrj-table-item td.metadata-type-core_description {
+    max-width: 310px;
+    width: 310px;
+    min-width: 160px;
+}
+.tainacan-sescrj-table-item th.tainacan-numeric,
+.tainacan-sescrj-table-item td.metadata-type-numeric,
+.tainacan-sescrj-table-item th.tainacan-date,
+.tainacan-sescrj-table-item td.metadata-type-date {
+    max-width: 120px;
+    width: 120px;
+    min-width: 120px;
+}
+.tainacan-sescrj-table-container .tainacan-sescrj-table-item:nth-child(even) {
+    background-color: var(--theme-palette-color-6);
+}
+.tainacan-sescrj-table-container .tainacan-sescrj-table-item a,
+.tainacan-sescrj-table-container .tainacan-sescrj-table-item a:hover,
+.tainacan-sescrj-table-container .tainacan-sescrj-table-item a:focus,
+.tainacan-sescrj-table-container .tainacan-sescrj-table-item a h3,
+.tainacan-sescrj-table-container .tainacan-sescrj-table-item a:hover h3,
+.tainacan-sescrj-table-container .tainacan-sescrj-table-item a:focus h3,
+.tainacan-sescrj-table-container .tainacan-sescrj-table-item a p,
+.tainacan-sescrj-table-container .tainacan-sescrj-table-item a:hover p,
+.tainacan-sescrj-table-container .tainacan-sescrj-table-item a:focus p {
+    text-decoration: none !important;
+}
+.tainacan-sescrj-table-container .tainacan-sescrj-table-item .metadata-label {
+    display: none;
+    color: var(--theme-palette-color-3);
+    font-size: 0.875rem;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+}
+
+.tainacan-sescrj-table-container .tainacan-sescrj-table-item .metadata-value {
+    color: var(--theme-palette-color-3);
+    font-size: 0.8125rem;
+    margin-bottom: 0;
+}
+
+.tainacan-sescrj-table-container .tainacan-sescrj-table-item .metadata-value .hierarchy-separator {
+    white-space: nowrap;
+}
+.tainacan-sescrj-table-container .tainacan-sescrj-table-item .metadata-type-core_title .metadata-value {
+    font-weight: bold;
+    font-size: 1.125rem;
+    color: inherit;
+}
+.tainacan-sescrj-table-container .tainacan-sescrj-table-item .metadata-type-core_title a:not(:hover) {
+    text-decoration: none !important;
+    color: var(--theme-palette-color-3);
+}
+.tainacan-sescrj-table-container .tainacan-sescrj-table-item .metadata-type-core_title .metadata-value::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+}
+
+/* When in mobile, the table is different */
+@media screen and (max-width: 800px) {
+    .tainacan-sescrj-table-container .tainacan-sescrj-table-container-table {
+        display: block;
+    }
+    .tainacan-sescrj-table-container .tainacan-sescrj-table-container-table tbody {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+    .tainacan-sescrj-table-container th {
+        display: none;
+        visibility: hidden;
+    }
+    .tainacan-sescrj-table-container .tainacan-sescrj-table-item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        flex-wrap: nowrap;
+        padding-bottom: 0;
+        border-bottom: none !important;
+    }
+    .tainacan-sescrj-table-container .tainacan-sescrj-table-item td {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .tainacan-sescrj-table-container .tainacan-sescrj-table-item td:not(:empty) {
+        padding: calc(0.5 * var(--global--spacing-unit)) calc(1.25 * var(--global--spacing-unit)) calc(0.75 * var(--global--spacing-unit)) calc(1.25 * var(--global--spacing-unit)) !important;
+    }
+    .tainacan-sescrj-table-container .tainacan-sescrj-table-item .metadata-label {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 801px) {
+    .tainacan-sescrj-table-container .multivalue-separator {
+        margin: 0 8px;
+        display: block;
+        height: 3px;
+        color: transparent;
+    }
+}
