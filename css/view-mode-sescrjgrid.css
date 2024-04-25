@@ -13,6 +13,8 @@
     display: flex;
     text-decoration: none !important;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .tainacan-sescrj-grid-container .tainacan-sescrj-grid-item.skeleton {
@@ -60,7 +62,7 @@
     color: inherit;
     width: 100%;
 }
-.tainacan-sescrj-grid-container .tainacan-sescrj-grid-item .metadata-description p {
+.tainacan-sescrj-grid-container .tainacan-sescrj-grid-item .metadata-area .metadata-secondary p {
     color: var(--theme-palette-color-3);
     font-weight: 500 !important;
     margin: 0;
@@ -69,11 +71,11 @@
     font-family: var(--theme-button-font-family);
 }
 
-.tainacan-sescrj-grid-container .tainacan-sescrj-grid-item .metadata-description > div {
+.tainacan-sescrj-grid-container .tainacan-sescrj-grid-item .metadata-area .metadata-secondary > div {
     padding: 0.25rem;
     border-top: 1px dashed var(--theme-palette-color-5);
 }
-.tainacan-sescrj-grid-container .tainacan-sescrj-grid-item .metadata-description h3 {
+.tainacan-sescrj-grid-container .tainacan-sescrj-grid-item .metadata-area .metadata-secondary h3 {
     font-size: 0.875em;
     display: none;
 }
