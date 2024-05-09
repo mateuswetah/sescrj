@@ -1,3 +1,11 @@
+@keyframes gridappear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 .tainacan-sescrj-table-container {
     min-height: 50vh;
     width: 100%;

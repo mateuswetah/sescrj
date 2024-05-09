@@ -1,20 +1,25 @@
+@keyframes gridappear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 .tainacan-sescrj-grid-container {
     min-height: 50vh;
     padding: 40px 0 0 32px;
     list-style: none;
-    animation-name: appear;
+    animation-name: gridappear;
     animation-duration: 0.5s;
 }
-
 .tainacan-sescrj-grid-container .tainacan-sescrj-grid-item {
     margin: 0;
     padding-bottom: 32px;
     width: 222px;
-    display: flex;
     text-decoration: none !important;
     justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
 }
 
 .tainacan-sescrj-grid-container .tainacan-sescrj-grid-item.skeleton {
@@ -42,10 +47,6 @@
     background-color: #e0e0e0;
     bottom: 0;
 }
-
-.tainacan-sescrj-grid-container .tainacan-sescrj-grid-item .sescrj-grid-item-thumbnail:hover {
-    background-color: #dbdbdb;
-}
 .tainacan-sescrj-grid-container .tainacan-sescrj-grid-item .metadata-title {
     flex-shrink: 0;
     padding: 0.75rem 0rem 0.5rem 0rem;
@@ -60,6 +61,11 @@
     white-space: normal;
     font-weight: bold;
     color: inherit;
+    width: 100%;
+    width: min-content;
+    min-width: fit-content;
+}
+.tainacan-sescrj-grid-container .tainacan-sescrj-grid-item .metadata-area {
     width: 100%;
 }
 .tainacan-sescrj-grid-container .tainacan-sescrj-grid-item .metadata-area .metadata-secondary p {

@@ -4,6 +4,7 @@
  * Author: mateuswetah
  * Template: blocksy
  * Text Domain: sescrj
+ * Version: 1.0.3
  */
 
 /* Styles related to Tainacan view modes */
@@ -252,7 +253,13 @@ a.icon-container:focus {
         left: 110px;
     }
 }
-
+body[class*=" post-type-archive-tnc_col_"] .ct-title-label, body[class*=" tax-tnc_"] .ct-title-label,
+body[data-prefix="tainacan-repository-items_archive"] .ct-title-label, body[data-prefix="tainacan-terms-items_archive"] .ct-title-label {
+    font-size: 32px !important;
+    font-weight: 400;
+    margin-bottom: .125em !important;
+    text-transform: none !important;
+}
 #filters-items-list .tainacan-icon-arrowdown::before {
     content: '-';
     border: 1px solid var(--theme-palette-color-4, #1e1e1e);
@@ -482,12 +489,11 @@ a.icon-container:focus {
 .tainacan-item-single-page .tainacan-item-section--metadata-sections .metadata-section-layout--collapses label {
     flex-direction: row-reverse;
     justify-content: space-between;
-    border-bottom-style: dashed !important;
     padding-left: 0;
 }
 .tainacan-item-single-page .tainacan-item-section--metadata-sections .metadata-section-layout--accordion label h2,
 .tainacan-item-single-page .tainacan-item-section--metadata-sections .metadata-section-layout--collapses label h2 {
-    margin-left: 0px !important;
+    margin: .5rem .5rem .5rem 0 !important;
 }
 .tainacan-item-single-page .tainacan-item-section--metadata-sections .metadata-section-layout--accordion input:checked + label .tainacan-icon,
 .tainacan-item-single-page .tainacan-item-section--metadata-sections .metadata-section-layout--collapses input:checked + label .tainacan-icon {
@@ -524,7 +530,9 @@ a.icon-container:focus {
 .tainacan-item-single-page .tainacan-item-section--metadata-sections .metadata-section-layout--accordion .tainacan-item-section,
 .tainacan-item-single-page .tainacan-item-section--metadata-sections .metadata-section-layout--collapses .tainacan-item-section {
     border-bottom: none;
-    padding: 2rem 0px 1rem 0px;
+    padding: 1.75rem 0px 1rem 16px;
+    margin-left: 32px;
+    border-left: 1px dashed var(--theme-palette-color-5);
 }
 
 /* Tweaks to metadata types in the single page */
@@ -570,6 +578,8 @@ a.icon-container:focus {
 .tainacan-item-single-page .tainacan-item-single .tainacan-item-section__metadata h3 {
     margin-bottom: .5rem;
     font-weight: 800;
+    border-bottom: 1px dashed var(--theme-palette-color-5);
+    padding-bottom: .25rem;
 }
 
 /* Special link style for relationship */
@@ -605,6 +615,20 @@ a.icon-container:focus {
 .tainacan-item-single-page .metadata-type-ainacan_url_plugin_metadata_type a:hover::after {
     margin-left: 0.4em;
 }
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section__metadata .tainacan-relationship-group .tainacan-relationship-metadatum .tainacan-relationship-metadatum-header .label {
+    font-weight: bold;
+    font-size: 1em;
+}
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section__metadata .tainacan-relationship-group .tainacan-relationship-metadatum .tainacan-metadatum,
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section__metadata .tainacan-compound-group {
+    padding-left: 0;
+    border: none;
+}
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section__metadata .tainacan-relationship-group > .multivalue-separator,
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section__metadata .tainacan-compound-group > .multivalue-separator {
+    margin: 0.5em;
+    visibility: hidden;
+}
 
 /* Special metadata above title */
 .sescrj-single-page-hero-meta {
@@ -620,16 +644,17 @@ a.icon-container:focus {
     font-weight: 700;
 }
 .sescrj-single-page-hero-meta .tainacan-metadata-label--convidados {
-    font-size: 11px;
+    /* font-size: 11px;
     font-weight: 500;
     text-transform: uppercase;
     padding-bottom: 10px;
     border-bottom: 1px dashed var(--theme-palette-color-5);
     padding-bottom: 8px;
-    margin-bottom: 8px;
+    margin-bottom: 8px; */
+    display: none;
 }
 .sescrj-single-page-hero-meta p {
-    margin-bottom: 14px;
+    margin-bottom: 4px;
 }
 
 /* Special link style for relationship inside the page header */

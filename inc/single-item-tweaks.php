@@ -231,7 +231,7 @@ function sescrj_render_extra_related_items_carousels_for_obras() {
         $current_item_serie = $current_item_serie_item_metadata->get_value();
         $current_item_serie = is_array($current_item_serie) ? $current_item_serie : [ $current_item_serie ];
         
-        if ( $current_item_serie && count($current_item_serie) > 0 ) {
+        if ( $current_item_serie && count($current_item_serie) > 0 && $current_item_serie[0] ) {
 
             $related_items_by_serie = [];
             $related_items_by_serie_query = $tainacan_items_repository->fetch([

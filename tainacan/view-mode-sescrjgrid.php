@@ -46,7 +46,7 @@
 				<a href="<?php echo sescrj_get_item_link_for_navigation(get_permalink(), $item_index); ?>">
 					<?php if ( has_post_thumbnail() ) : ?>
 						<div class="sescrj-grid-item-thumbnail">
-							<?php the_post_thumbnail( 'tainacan-full-large' ); ?>
+							<?php the_post_thumbnail( 'medium' ); ?>
 							<div class="skeleton"></div> 
 						</div>
 					<?php else : ?>
