@@ -51,7 +51,7 @@
 						</div>
 					<?php else : ?>
 						<div class="sescrj-grid-item-thumbnail sescrj-placeholder">
-							<div class="sescrj-placeholder--text"><?php _e('Imagem indisponível', 'sescrj'); ?></div> 
+							<img src="<?php echo get_stylesheet_directory_uri() . '/images/undefined-image.png'; ?>" alt="<?php _e('Imagem indisponível', 'sescrj'); ?>" /> 
 						</div>
 					<?php endif; ?>
 					<div class="metadata-area">

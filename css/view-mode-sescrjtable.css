@@ -87,12 +87,8 @@ th.sescrj-table-item-thumbnail {
     box-shadow: -1px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .sescrj-table-item-thumbnail .sescrj-placeholder {
-    width: 100px;
-    height: 70px;
-    margin: 0 auto;
-    padding: 1rem;
-    font-size: 0.75rem;
-    box-shadow: -1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 0px;
+    background-color: transparent;
 }
 .tainacan-sescrj-table-item th.tainacan-text--title,
 .tainacan-sescrj-table-item td.metadata-type-core_title {

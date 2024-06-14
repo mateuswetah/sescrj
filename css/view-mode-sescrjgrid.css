@@ -8,7 +8,7 @@
 }
 .tainacan-sescrj-grid-container {
     min-height: 50vh;
-    padding: 40px 0 0 32px;
+    padding: 40px 0 0 70px;
     list-style: none;
     animation-name: gridappear;
     animation-duration: 0.5s;
@@ -37,9 +37,10 @@
     box-shadow: -1px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .tainacan-sescrj-grid-container .tainacan-sescrj-grid-item .sescrj-grid-item-thumbnail.sescrj-placeholder {
-    height: 187px;
+    /* height: 187px;
     border-top: 8px solid var(--theme-palette-color-3);
-    box-shadow: -1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: -1px 4px 4px 0px rgba(0, 0, 0, 0.25); */
+    padding: 0;
 }
 .tainacan-sescrj-grid-container .tainacan-sescrj-grid-item .sescrj-grid-item-thumbnail .skeleton {
     position: absolute;

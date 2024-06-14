@@ -116,4 +116,16 @@ function sescrj_register_tainacan_view_modes() {
 }
 add_action( 'after_setup_theme', 'sescrj_register_tainacan_view_modes' );
 
+/* Adiciona placeholder para documentos vazios */
+function sescrj_show_placeholder_for_empty_documents() {
+	if ( tainacan_has_document() )
+		return;
+?>
+	<div class="sescrj-empty-document-placeholder">
+		<img src="<?php echo get_stylesheet_directory_uri() . '/images/undefined-document.png'; ?>" alt="<?php _e('Imagem indisponível', 'sescrj'); ?>" /> 
+	</div>
+<?php
+}	
+add_action( 'tainacan-blocksy-single-item-after-document', 'sescrj_show_placeholder_for_empty_documents' );
+
 require get_stylesheet_directory() . '/inc/single-item-tweaks.php';

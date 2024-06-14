@@ -73,7 +73,7 @@
 					<?php else : ?>
 						<td class="sescrj-table-item-thumbnail">
 							<div class="sescrj-placeholder">
-								<div class="sescrj-placeholder--text"><?php _e('Imagem indisponível', 'sescrj'); ?></div> 
+								<img src="<?php echo get_stylesheet_directory_uri() . '/images/undefined-image.png'; ?>" alt="<?php _e('Imagem indisponível', 'sescrj'); ?>" /> 
 							</div>
 						</td>
 					<?php endif; ?>

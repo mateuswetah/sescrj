@@ -4,7 +4,7 @@
  * Author: mateuswetah
  * Template: blocksy
  * Text Domain: sescrj
- * Version: 1.0.3
+ * Version: 1.1.2
  */
 
 /* Styles related to Tainacan view modes */
@@ -14,6 +14,7 @@
 body {
     --real-max-width: min(var(--theme-container-edge-spacing), var(--theme-normal-container-max-width));
     --bleeding-width: calc(100% + (100vw - var(--real-max-width))/2);
+    --side-logo-margin: 110px;
 }
 .is-style-sescrj-bleeding-border-top {
     position: relative;
@@ -152,7 +153,8 @@ a.icon-container:focus {
     border-top: 8px solid var(--theme-palette-color-3);
 }
 .wp-block-tainacan-carousel-items-list .tainacan-carousel .swiper-slide img {
-    box-shadow: -1px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+    box-shadow: -1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 100%; 
 }
 .wp-block-tainacan-carousel-items-list .tainacan-carousel .swiper .swiper-slide a > span,
 
@@ -247,10 +249,10 @@ a.icon-container:focus {
         width: 100%;
     }
     .sescrj-tainacan-archive-page .hero-section[data-type="type-2"] > [class*="ct-container"] .ct-breadcrumbs {
-        margin-left: 110px;
+        margin-left: var(--side-logo-margin, 110px);
     }
     .sescrj-tainacan-archive-page .hero-section[data-type="type-2"] > [class*="ct-container"] .ct-breadcrumbs::after {
-        left: 110px;
+        left: var(--side-logo-margin, 110px);
     }
 }
 body[class*=" post-type-archive-tnc_col_"] .ct-title-label, body[class*=" tax-tnc_"] .ct-title-label,
@@ -463,6 +465,12 @@ body[data-prefix="tainacan-repository-items_archive"] .ct-title-label, body[data
     }
   }
   @media only screen and (max-width: 999.98px) {
+    body {
+        --side-logo-margin: 0;
+    }
+    #header .site-branding {
+        margin-bottom: -45px !important;
+    }
     .tainacan-item-single-page .tainacan-item-single.tainacan-item-single--layout-type-gm {
         grid-template-areas:
             'special-title'
@@ -470,14 +478,14 @@ body[data-prefix="tainacan-repository-items_archive"] .ct-title-label, body[data
             'metadata   ' 
             'related    ';
     }
-    .sescrj-tainacan-single-page .hero-section[data-type="type-2"] > [class*="ct-container"] > * {
-        width: calc(100% - 110px);
+    /* .sescrj-tainacan-single-page .hero-section[data-type="type-2"] > [class*="ct-container"] > * {
+        width: calc(100% - var(--side-logo-margin, 110px));
         margin-right: auto;
-        margin-left: 110px;
-    }
+        margin-left: var(--side-logo-margin, 110px);
+    } */
     .sescrj-tainacan-single-page .hero-section[data-type="type-2"] > [class*="ct-container"]::after,
     .sescrj-tainacan-single-page .hero-section[data-type="type-2"] > [class*="ct-container"] .ct-breadcrumbs::after  {
-        left: 110px;
+        left: var(--side-logo-margin, 110px);
     }
     .sescrj-tainacan-single-page  .tainacan-item-single .tainacan-item-section--gallery {
         position: initial;
@@ -716,6 +724,10 @@ body[data-prefix="tainacan-repository-items_archive"] .ct-title-label, body[data
 .tainacan-media-component__swiper-main li.swiper-slide {
     height: auto !important;
 }
+.sescrj-empty-document-placeholder {
+    text-align: center;
+    padding: var(--side-logo-margin);
+}
 
 /* Botões de compartilhar */
 .sescrj-header-elements + .page-title {
@@ -751,9 +763,19 @@ body[data-prefix="tainacan-repository-items_archive"] .ct-title-label, body[data
     padding: 8px;
     display: block;
     border-radius: 100%;
+    border: none;
+    background: var(--theme-palette-color-8);
     --icon-color: var(--theme-palette-color-1);
     --theme-icon-size: 1.25rem;
     transition: margin 0.3s ease;
+}
+.sescrj-social-icons .ct-share-box[data-type="type-1"] > div {
+    border: none;
+    grid-template-columns: repeat(auto-fit, minmax(1.25rem, 1fr));
+}
+.sescrj-social-icons .ct-share-box[data-type="type-1"] .ct-icon-container {
+    min-height: 1.25rem;
+    padding: 0;
 }
 .sescrj-social-icons.is-list-open [data-icons-type] > * {
     margin-bottom: 8px;
@@ -806,20 +828,30 @@ body[data-prefix="tainacan-repository-items_archive"] .ct-title-label, body[data
     --gutenslider-arrow-bg-color: var(--theme-palette-color-8) !important;
     --gutenslider-arrow-hover-color: var(--theme-palette-color-1) !important;
     --gutenslider-arrow-bg-hover-color: var(--theme-palette-color-8) !important;
+    --gutenslider-arrow-x-offset-sm: 0 !important;
+    --gutenslider-arrow-x-offset-md: 0 !important;
     --gutenslider-arrow-x-offset: 0 !important;
     --gutenslider-arrow-y-offset: 220px !important;
+    --gutenslider-min-height-md: 533px !important;
+    --gutenslider-min-height-sm: 533px !important;
 }
 .wp-block-eedee-block-gutenslider.arrow-position-sides .eedee-gutenslider-prev {
     left: unset !important;
     right: 30px !important;
+    top: calc(50% + var(--gutenslider-arrow-y-offset)) !important;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath fill='%23000' d='M 10.694196,6 12.103795,7.4095983 8.5000002,11.022321 H 19.305804 v 1.955358 H 8.5000002 L 12.103795,16.590402 10.694196,18 4.6941962,12 Z'%3E%3C/path%3E%3Cpath d='M0 0h24v24H0z' fill='none'%3E%3C/path%3E%3C/svg%3E") !important;
 }
 .wp-block-eedee-block-gutenslider.arrow-position-sides .eedee-gutenslider-next {
+    top: calc(50% + var(--gutenslider-arrow-y-offset)) !important;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath fill='%23000' d='M 13.305804,6 11.896205,7.4095983 15.5,11.022321 H 4.6941964 v 1.955358 H 15.5 L 11.896205,16.590402 13.305804,18 l 6,-6 z'%3E%3C/path%3E%3Cpath d='M0 0h24v24H0z' fill='none'%3E%3C/path%3E%3C/svg%3E") !important;
 }
 .wp-block-eedee-block-gutenslider.arrow-position-sides .eedee-gutenslider-prev > svg,
 .wp-block-eedee-block-gutenslider.arrow-position-sides .eedee-gutenslider-next > svg{
     visibility: hidden;
+}
+.wp-block-eedee-block-gutenslider.gs-frontend .swiper,
+.wp-block-eedee-block-gutenslider.gs-frontend .swiper-wrapper {
+    min-height: unset !important;
 }
 .wp-block-eedee-block-gutenslider.gs-frontend.gs-finished-controls .eedee-gutenslider-nav {
     background-color: var(--theme-palette-color-8) !important;
