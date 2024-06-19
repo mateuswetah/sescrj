@@ -8,7 +8,7 @@
 }
 .tainacan-sescrj-grid-container {
     min-height: 50vh;
-    padding: 40px 0 0 70px;
+    padding: 40px 0 0 58px;
     list-style: none;
     animation-name: gridappear;
     animation-duration: 0.5s;
@@ -37,10 +37,27 @@
     box-shadow: -1px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .tainacan-sescrj-grid-container .tainacan-sescrj-grid-item .sescrj-grid-item-thumbnail.sescrj-placeholder {
-    /* height: 187px;
-    border-top: 8px solid var(--theme-palette-color-3);
-    box-shadow: -1px 4px 4px 0px rgba(0, 0, 0, 0.25); */
+    height: 187px;
     padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+    border-top: 8px solid var(--theme-palette-color-3);
+    box-shadow: -1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.tainacan-sescrj-grid-container .tainacan-sescrj-grid-item .sescrj-grid-item-thumbnail.sescrj-placeholder .sescrj-placeholder--text {
+    padding: 2px 2rem;
+}
+.tainacan-sescrj-grid-container .tainacan-sescrj-grid-item .sescrj-grid-item-thumbnail.sescrj-placeholder hr {
+    margin: 0;
+    border-top: 1px solid var(--theme-palette-color-3);
+    height: 0px;
+    background: transparent;
+    width: 100%;
+}
+.tainacan-sescrj-grid-container .tainacan-sescrj-grid-item .sescrj-grid-item-thumbnail.sescrj-placeholder hr:nth-of-type(2n) {
+    border-top: 1px dashed var(--theme-palette-color-3);
 }
 .tainacan-sescrj-grid-container .tainacan-sescrj-grid-item .sescrj-grid-item-thumbnail .skeleton {
     position: absolute;
@@ -78,9 +95,10 @@
     font-family: var(--theme-button-font-family);
 }
 
-.tainacan-sescrj-grid-container .tainacan-sescrj-grid-item .metadata-area .metadata-secondary > div {
-    padding: 0.25rem;
+.tainacan-sescrj-grid-container .tainacan-sescrj-grid-item .metadata-area .metadata-secondary > * {
+    padding: 0.25rem 0;
     border-top: 1px dashed var(--theme-palette-color-5);
+    display: block;
 }
 .tainacan-sescrj-grid-container .tainacan-sescrj-grid-item .metadata-area .metadata-secondary h3 {
     font-size: 0.875em;

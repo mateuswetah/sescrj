@@ -51,7 +51,17 @@
 						</div>
 					<?php else : ?>
 						<div class="sescrj-grid-item-thumbnail sescrj-placeholder">
-							<img src="<?php echo get_stylesheet_directory_uri() . '/images/undefined-image.png'; ?>" alt="<?php _e('Imagem indisponível', 'sescrj'); ?>" /> 
+							<hr>
+							<hr>
+							<hr>
+							<hr>
+							<div class="sescrj-placeholder--text"><?php _e('Imagem indisponível', 'sescrj'); ?></div> 
+							<hr>
+							<hr>
+							<hr>
+							<hr>
+							<hr>
+							<hr>
 						</div>
 					<?php endif; ?>
 					<div class="metadata-area">
@@ -62,17 +72,15 @@
 						<?php endif; ?>
 						<?php if ( $has_meta ): ?>
 							<div class="metadata-secondary">
-								<p>
-									<?php
-										tainacan_the_metadata(array(
-											'exclude_title' => true,
-											'metadata__in' => $view_mode_displayed_metadata['meta']
-										));
-									?>
-								</p>
+								<?php
+									tainacan_the_metadata(array(
+										'exclude_title' => true,
+										'metadata__in' => $view_mode_displayed_metadata['meta']
+									));
+								?>
 							</div>
 						<?php endif; ?>
-					<div class="metadata-area">
+					</div>
 				</a>
 			</li>	
 		

@@ -116,16 +116,29 @@ function sescrj_register_tainacan_view_modes() {
 }
 add_action( 'after_setup_theme', 'sescrj_register_tainacan_view_modes' );
 
-/* Adiciona placeholder para documentos vazios */
-function sescrj_show_placeholder_for_empty_documents() {
-	if ( tainacan_has_document() )
-		return;
-?>
-	<div class="sescrj-empty-document-placeholder">
-		<img src="<?php echo get_stylesheet_directory_uri() . '/images/undefined-document.png'; ?>" alt="<?php _e('Imagem indisponível', 'sescrj'); ?>" /> 
-	</div>
-<?php
-}	
-add_action( 'tainacan-blocksy-single-item-after-document', 'sescrj_show_placeholder_for_empty_documents' );
+/* Define o novo Cartões como modo de visualização padrão */
+function sescrj_set_default_view_mode($default) {
+	if ( !is_admin() )
+		return 'sescrjgrid';
+
+	return $default;
+}
+add_filter( 'tainacan-default-view-mode-for-themes', 'sescrj_set_default_view_mode', 10, 1 );
+
+function sescrj_set_enabled_view_modes($registered_view_modes_slugs) {
+
+	if ( !is_admin() )
+		return [ 'sescrjgrid', 'sescrjtable' ];
+
+	return $registered_view_modes_slugs;
+}
+add_filter( 'tainacan-enabled-view-modes-for-themes', 'sescrj_set_enabled_view_modes', 10, 1 );
+
+/* Usa o mesmo ícone de busca do Tainacan */
+add_filter('blocksy:header:search:icon', function ($icon) {
+    return '<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M8.13545 0.5C4.02498 0.5 0.669922 3.85506 0.669922 7.96552C0.669922 12.076 4.02498 15.431 8.13545 15.431C9.99969 15.431 11.7029 14.7357 13.0139 13.598L13.468 14.0521V15.431L19.4254 21.3885C20.0141 21.9772 20.9697 21.9772 21.5584 21.3885C22.1471 20.7998 22.1471 19.8442 21.5584 19.2555L15.601 13.298H14.222L13.7679 12.8439C14.9056 11.533 15.601 9.82977 15.601 7.96552C15.601 3.85506 12.2459 0.5 8.13545 0.5ZM8.13545 2.63301C11.0931 2.63301 13.468 5.00782 13.468 7.96552C13.468 10.9232 11.0931 13.298 8.13545 13.298C5.17775 13.298 2.80293 10.9232 2.80293 7.96552C2.80293 5.00782 5.17775 2.63301 8.13545 2.63301Z" fill="#1E1E1E"/>
+	</svg>';
+});
 
 require get_stylesheet_directory() . '/inc/single-item-tweaks.php';

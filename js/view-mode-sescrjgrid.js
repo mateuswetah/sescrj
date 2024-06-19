@@ -6,7 +6,7 @@ function buildMasonry(event) {
                     // options
                     itemSelector: '.tainacan-sescrj-grid-item',
                     columnWidth: 222,
-                    gutter: 32
+                    gutter: 38
                 });
                 imagesLoaded(document.getElementById('tainacan-sescrj-grid-container'), () => {
                     window.tainacanItemsListMasonry.layout();

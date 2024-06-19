@@ -470,6 +470,7 @@ function sescrj_render_sharing_buttons() {
                     </svg>
                 </span>
                 <div class="sescrj-social-icons">
+                    <div class="sescrj-social-icons-backdrop" onmousedown="document.getElementsByClassName('sescrj-social-icons')[0].classList.remove('is-list-open');"></div>
                     <?php echo blocksy_get_social_share_box(); ?>
                 </div>
             </button>
@@ -488,3 +489,25 @@ add_filter( 'tainacan-swiper-main-options', function($options) {
         )
     );
 }, 9 , 1);
+
+/* Adiciona placeholder para documentos vazios */
+function sescrj_show_placeholder_for_empty_documents() {
+	if ( tainacan_has_document() )
+		return;
+?>
+	<div class="sescrj-empty-document-placeholder">
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <div class="sescrj-placeholder--text"><?php _e('Imagem indisponível', 'sescrj'); ?></div> 
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+	</div>
+<?php
+}	
+add_action( 'tainacan-blocksy-single-item-after-document', 'sescrj_show_placeholder_for_empty_documents' );

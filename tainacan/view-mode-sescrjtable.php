@@ -67,14 +67,21 @@
 				<tr class="tainacan-sescrj-table-item">
 					<?php if ( has_post_thumbnail() ) : ?>
 						<td class="sescrj-table-item-thumbnail">
-							<?php the_post_thumbnail( 'tainacan-full-medium' ); ?>
-							<div class="skeleton"></div> 
+							<a href="<?php echo sescrj_get_item_link_for_navigation(get_permalink(), $item_index); ?>">
+								<?php the_post_thumbnail( 'tainacan-full-medium' ); ?>
+								<div class="skeleton"></div> 
+							</a>
 						</td>
 					<?php else : ?>
 						<td class="sescrj-table-item-thumbnail">
-							<div class="sescrj-placeholder">
-								<img src="<?php echo get_stylesheet_directory_uri() . '/images/undefined-image.png'; ?>" alt="<?php _e('Imagem indisponível', 'sescrj'); ?>" /> 
-							</div>
+							<a href="<?php echo sescrj_get_item_link_for_navigation(get_permalink(), $item_index); ?>">
+								<div class="sescrj-placeholder">
+									<hr>
+									<div class="sescrj-placeholder--text"><?php _e('Imagem indisponível', 'sescrj'); ?></div> 
+									<hr>
+									<hr>
+								</div>
+							</a>
 						</td>
 					<?php endif; ?>
 					<?php if ( $has_title_enabled ): ?>

@@ -16,7 +16,7 @@ function sescrj_register_block_bindings() {
         
         $total_items = wp_count_posts( 'tnc_col_' . $source_args['collectionId'] . '_item', 'readable' );
 
-        return '<strong>' . ( $total_items->publish ?? '0' ) . '</strong>';
+        return ( $total_items->publish ?? '0' );
     }
 
 	register_block_bindings_source( 'sescrj/collection-total-items', array(

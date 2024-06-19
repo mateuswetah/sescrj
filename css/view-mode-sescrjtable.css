@@ -47,10 +47,14 @@
     border-bottom: 1px solid var(--theme-palette-color-3);
     vertical-align: center;
     color: var(--theme-palette-color-3);
-    font-size: 0.75rem;
-    font-weight: normal;
+    font-size: 0.625rem;
+    font-weight: 800;
     text-align: start;
-    padding: 0 calc(2.25 * var(--global--spacing-unit)) calc(0.875 * var(--global--spacing-unit)) 0;
+    padding: 2px 12px;
+    text-transform: uppercase;
+}
+.tainacan-sescrj-table-container th.tainacan-text--title {
+    padding-left: 0;
 }
 .tainacan-sescrj-table-item td {
     border: none;
@@ -60,22 +64,26 @@
     width: 180px;
     min-width: 80px;
     height: 115px;
-    padding: 8px 0;
+    padding: 8px 12px;
 }
 .sescrj-table-item-thumbnail  {
     margin: 0 auto;
     text-align: center !important;
     width: 200px;
     max-width: 200px;
+    border: none;
+    padding: 0;
 }
 th.sescrj-table-item-thumbnail {
     width: 200px;
     max-width: 200px;
+    padding: 0;
+    border: none;
 }
 .sescrj-table-item-thumbnail--border {
     width: 90%;
     display: block;
-    margin-bottom: -12px;
+    margin-top: 16px;
     border-bottom: 8px solid var(--theme-palette-color-3);
 }
 .sescrj-table-item-thumbnail img {
@@ -87,8 +95,30 @@ th.sescrj-table-item-thumbnail {
     box-shadow: -1px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .sescrj-table-item-thumbnail .sescrj-placeholder {
-    padding: 0px;
-    background-color: transparent;
+    width: 100px;
+    height: 70px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0;
+    gap: 10px;
+    font-size: 0.75rem;
+    box-shadow: -1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.sescrj-table-item-thumbnail .sescrj-placeholder .sescrj-placeholder--text {
+    padding: 2px 1rem;
+    font-size: 0.65rem;
+}
+.sescrj-table-item-thumbnail .sescrj-placeholder hr {
+    margin: 0;
+    border-top: 1px solid var(--theme-palette-color-3);
+    height: 0px;
+    background: transparent;
+    width: 100%;
+}
+.sescrj-table-item-thumbnail .sescrj-placeholder hr:nth-of-type(2n) {
+    border-top: 1px dashed var(--theme-palette-color-3);
 }
 .tainacan-sescrj-table-item th.tainacan-text--title,
 .tainacan-sescrj-table-item td.metadata-type-core_title {
@@ -96,6 +126,7 @@ th.sescrj-table-item-thumbnail {
     width: 290px;
     min-width: 160px;
     position: relative;
+    padding-left: 0;
 }
 .tainacan-sescrj-table-item th.tainacan-textarea,
 .tainacan-sescrj-table-item td.metadata-type-core_description {
@@ -144,7 +175,7 @@ th.sescrj-table-item-thumbnail {
 }
 .tainacan-sescrj-table-container .tainacan-sescrj-table-item .metadata-type-core_title .metadata-value {
     font-weight: bold;
-    font-size: 1.125rem;
+    font-size: 0.875rem;
     color: inherit;
 }
 .tainacan-sescrj-table-container .tainacan-sescrj-table-item .metadata-type-core_title a:not(:hover) {
