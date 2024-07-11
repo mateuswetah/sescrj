@@ -67,7 +67,7 @@
     padding: 8px 12px;
 }
 .sescrj-table-item-thumbnail  {
-    margin: 0 auto;
+    margin: 12px auto;
     text-align: center !important;
     width: 200px;
     max-width: 200px;
@@ -219,6 +219,7 @@ th.sescrj-table-item-thumbnail {
     .tainacan-sescrj-table-container .tainacan-sescrj-table-item td {
         width: 100% !important;
         max-width: 100% !important;
+        height: auto;
     }
     .tainacan-sescrj-table-container .tainacan-sescrj-table-item td:not(:empty) {
         padding: calc(0.5 * var(--global--spacing-unit)) calc(1.25 * var(--global--spacing-unit)) calc(0.75 * var(--global--spacing-unit)) calc(1.25 * var(--global--spacing-unit)) !important;

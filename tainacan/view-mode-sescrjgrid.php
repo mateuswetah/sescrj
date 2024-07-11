@@ -74,6 +74,7 @@
 							<div class="metadata-secondary">
 								<?php
 									tainacan_the_metadata(array(
+										'hide_empty' => true,
 										'exclude_title' => true,
 										'metadata__in' => $view_mode_displayed_metadata['meta']
 									));

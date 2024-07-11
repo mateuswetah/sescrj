@@ -17,6 +17,13 @@
             .is-style-sescrj-bleeding-content > * {
                 max-width: none;
                 width: 100%;
+            }
+            @media (max-width: 689.98px) {
+                .alignfull.is-style-sescrj-bleeding-content {
+                    width: calc(var(--bleeding-width) + 6vw) !important;
+                    max-width: calc(var(--bleeding-width) + 6vw) !important;
+                    margin-left: -6vw;
+                }
             }';
 
         register_block_style(
@@ -116,7 +123,7 @@
             array(
                 'name'         => 'sescrj-bleeding-content',
                 'label'        => __( 'Conteúdo vazado', 'sescrj' ),
-                'inline_style' => $inline_style_bleeding_content
+                'inline_style' => $inline_style_bleeding_content . ' .wp-block-separator:not(.is-style-dots).is-style-sescrj-bleeding-content { height: 8px; }'
             )
         );
         register_block_style(
@@ -149,6 +156,29 @@
                 'name'         => 'sescrj-stacked',
                 'label'        => __( 'Empilhado', 'sescrj' ),
                 'inline_style' => $inline_style_bleeding_content
+            )
+        );
+
+        register_block_style(
+            'core/separator',
+            array(
+                'name'         => 'sescrj-thick-line',
+                'label'        => __( 'Grosso', 'sescrj' ),
+                'inline_style' => 'hr.wp-block-separator.is-style-sescrj-thick-line { height: 8px; --theme-block-max-width: 100% !important; }'
+            )
+        );
+
+        register_block_style(
+            'core/columns',
+            array(
+                'name'         => 'sescrj-reverse-columns-on-mobile',
+                'label'        => __( 'Inverter no mobile', 'sescrj' ),
+                'inline_style' => '
+                    @media (max-width: 781px) {
+                        .wp-block-columns.is-style-sescrj-reverse-columns-on-mobile {
+                            flex-direction: column-reverse;
+                        }
+                    }'
             )
         );
     }

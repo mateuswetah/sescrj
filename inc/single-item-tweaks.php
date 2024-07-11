@@ -13,7 +13,7 @@ function sescrj_single_page_hero_title_after() {
 
             $special_metadata_ids = [ 
                 SESCRJ_OBRAS_AUTORIA_METADATUM_ID, // Autoria
-                SESCRJ_OBRAS_ANO_METADATUM_ID, // Ano
+                // SESCRJ_OBRAS_ANO_METADATUM_ID, // Ano - Removido pois agora fica no titulo
                 SESCRJ_OBRAS_DIMENCOES_METADATUM_ID // Dimensões resumo
             ];
             
@@ -481,14 +481,14 @@ function sescrj_render_sharing_buttons() {
 add_action('blocksy:hero:title:before', 'sescrj_render_sharing_buttons');
 
 /* Permite que a galeria de mídia mude a altura a depender da imagem */
-add_filter( 'tainacan-swiper-main-options', function($options) {
-    return array_merge(
-        $options,
-        array(
-            'autoHeight' => true
-        )
-    );
-}, 9 , 1);
+// add_filter( 'tainacan-swiper-main-options', function($options) {
+//     return array_merge(
+//         $options,
+//         array(
+//             'autoHeight' => true
+//         )
+//     );
+// }, 9 , 1);
 
 /* Adiciona placeholder para documentos vazios */
 function sescrj_show_placeholder_for_empty_documents() {
