@@ -143,6 +143,22 @@
 }
 @media screen and (max-width: 768px) {
     .tainacan-sescrj-grid-container {
-        margin-top: 120px;
+        margin-top: 0px;
+        padding-left: 0px;
+    }
+}
+@media screen and (max-width: 548px) {
+    .tainacan-sescrj-grid-container {
+        height: auto !important;
+    }
+    .tainacan-sescrj-grid-container .tainacan-sescrj-grid-item {
+        position: initial !important;
+        margin: 0 auto;
+    }
+    .tainacan-sescrj-grid-container .tainacan-sescrj-grid-item {
+        width: 300px;
+    }
+    .tainacan-sescrj-grid-container .tainacan-sescrj-grid-item .sescrj-grid-item-thumbnail img {
+        max-height: 300px;
     }
 }

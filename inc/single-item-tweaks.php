@@ -140,9 +140,9 @@ function sescrj_single_item_bottom() {
 						'collection_heading_tag' => 'h3',
 						'collection_heading_class_name' => 'screen-reader-text',
 						'carousel_args' => [
-							'max_items_per_screen' => 6,
+							'variable_items_width' => true,
 							'image_size' => 'tainacan-medium-full',
-							'space_between_items' => 56,
+							'space_between_items' => 40,
 							'arrow_style' => 'type-2',
 							'hide_title' => false,
 							'space_around_carousel' => 20
@@ -387,9 +387,9 @@ function sescrj_render_items_carousel( $label, $collection_id, $related_items, $
         return;
 
     $block_args = [
-        'max_items_per_screen' => 6,
+        'variable_items_width' => true,
         'image_size' => 'tainacan-medium-full',
-        'space_between_items' => 56,
+        'space_between_items' => 40,
         'arrow_style' => 'type-2',
         'hide_title' => false,
         'space_around_carousel' => 20
