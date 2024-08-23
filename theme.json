@@ -87,9 +87,9 @@
 				{
 					"fluid": {
 						"min": "22px",
-						"max": "30px"
+						"max": "27px"
 					},
-					"size": "30px",
+					"size": "27px",
 					"slug": "large"
 				},
 				{
@@ -114,6 +114,11 @@
 
 
 	"styles": {
+		"blocks": {
+			"core/separator": {
+				"css": "&:not(.is-style-dots):not(.is-style-sescrj-bleeding-content):not(.is-style-sescrj-thick-line){ height: 1px !important; }"
+			}
+		},
 		"elements": {
 			"link": {
 				"typography": { 

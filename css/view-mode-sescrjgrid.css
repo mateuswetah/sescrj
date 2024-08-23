@@ -45,6 +45,7 @@
     gap: 10px;
     border-top: 8px solid var(--theme-palette-color-3);
     box-shadow: -1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    aspect-ratio: 1/1;
 }
 .tainacan-sescrj-grid-container .tainacan-sescrj-grid-item .sescrj-grid-item-thumbnail.sescrj-placeholder .sescrj-placeholder--text {
     padding: 2px 2rem;
@@ -73,7 +74,7 @@
     width: 100%;
 }
 .tainacan-sescrj-grid-container .tainacan-sescrj-grid-item .metadata-title h3 {
-    font-size: 0.875rem;
+    font-size: 0.875em;
     margin-top: 5px;
     margin-bottom: 0;
     white-space: normal;
@@ -94,8 +95,9 @@
     font-weight: 500 !important;
     margin: 0;
     text-decoration: none !important;
-    font-size: 0.75rem !important;
+    font-size: 0.75em !important;
     font-family: var(--theme-button-font-family);
+    font-feature-settings: "ss01" 1, "ss03" 1, "ss05" 1;
 }
 
 .tainacan-sescrj-grid-container .tainacan-sescrj-grid-item .metadata-area .metadata-secondary > *[class^='metadata-type'] {
@@ -146,6 +148,9 @@
         margin-top: 0px;
         padding-left: 0px;
     }
+    .tainacan-sescrj-grid-container .tainacan-sescrj-grid-item {
+        font-size: 18px;
+    }
 }
 @media screen and (max-width: 548px) {
     .tainacan-sescrj-grid-container {
@@ -154,9 +159,8 @@
     .tainacan-sescrj-grid-container .tainacan-sescrj-grid-item {
         position: initial !important;
         margin: 0 auto;
-    }
-    .tainacan-sescrj-grid-container .tainacan-sescrj-grid-item {
         width: 300px;
+        font-size: 20px;
     }
     .tainacan-sescrj-grid-container .tainacan-sescrj-grid-item .sescrj-grid-item-thumbnail img {
         max-height: 300px;

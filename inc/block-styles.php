@@ -22,7 +22,7 @@
                 .alignfull.is-style-sescrj-bleeding-content {
                     width: calc(var(--bleeding-width) + 6vw) !important;
                     max-width: calc(var(--bleeding-width) + 6vw) !important;
-                    margin-left: -6vw;
+                    margin-left: -6vw !important;
                 }
             }';
 
